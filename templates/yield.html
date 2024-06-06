@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='yield_form.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Yield Page</h1>
+        <form method="POST" action="/yield">
+            <div class="form-group">
+                <label for="district">District:</label>
+                <select class="form-control" id="district" name="district" required>
+                    <option value="">Select a district</option>
+                    <option value="DEHRADUN">DEHRADUN</option>
+                    <option value="HARIDWAR">HARIDWAR</option>
+                    <option value="CHAMOLI">CHAMOLI</option>
+                    <option value="RUDRAPRAYAG">RUDRAPRAYAG</option>
+                    <option value="TEHRI GARHWAL">TEHRI GARHWAL</option>
+                    <option value="UTTARKASHI">UTTARKASHI</option>
+                    <option value="PAURI GARHWAL">PAURI GARHWAL</option>
+                    <option value="ALMORA">ALMORA</option>
+                    <option value="NAINITAL">NAINITAL</option>
+                    <option value="PITHORAGARH">PITHORAGARH</option>
+                    <option value="UDHAM SINGH NAGAR">UDHAM SINGH NAGAR</option>
+                    <option value="BAGESHWAR">BAGESHWAR</option>
+                    <option value="CHAMPAWAT">CHAMPAWAT</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="season">Season:</label>
+                <select class="form-control" id="season" name="season" required>
+                    <option value="">Select a season</option>
+                    <option value="KHARIF">KHARIF</option>
+                    <option value="RABI">RABI</option>
+                    <option value="WHOLE YEAR">WHOLE YEAR</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="crops">Crops:</label>
+                <select class="form-control" id="crops" name="crops" required>
+                    <option value="">SELECT A CROP</option>
+                    <option value="wheat">WHEAT</option>
+                    <option value="rice">RICE</option>
+                    <option value="maize">MAIZE</option>
+                    <option value="barley">BARLEY</option>
+                    <option value="soybean">SOYBEAN</option>
+                    <option value="cotton">COTTON</option>
+                    <option value="sorghum">SORGHUM</option>
+                    <option value="millet">MILLET</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="area">Area:</label>
+                <input type="number" class="form-control" id="area" name="area" required>
+            </div>
+            <button type="submit" class="btn btn-primary glow-on-hover">Predict Yield</button> 
+        </form>
+    </div>
+    <a href="/" class="btn btn-secondary mt-3">Back to Main</a>
+</body>
+</html>

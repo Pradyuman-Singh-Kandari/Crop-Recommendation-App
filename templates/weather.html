@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+    <h1>Check Weather</h1>
+    <form action="" method="post">
+        <label for="city">Select a city:</label>
+        <select id="city" name="city">
+            <option value="Mumbai">Mumbai</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Hyderabad">Hyderabad</option>
+        </select>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    {% if city %}
+        <h2>Weather in {{ city }}</h2>
+        <p>Temperature: {{ temperature }}°C</p>
+        <p>Atmospheric Pressure: {{ pressure }} hPa</p>
+        <p>Humidity: {{ humidity }}%</p>
+        <p>Description: {{ weather_description }}</p>
+    {% endif %}
+</body>
+</html>

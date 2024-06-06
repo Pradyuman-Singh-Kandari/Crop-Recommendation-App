@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Recommendation Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fertilizer_res.css') }}"> 
+    <style>
+        body {
+            background-color: #f8f9fa; /* Set background color */
+            font-family: Arial, sans-serif; /* Set font family */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Make container full height of viewport */
+        }
+        .result-title {
+            color: #007bff; /* Set title color */
+            margin-bottom: 20px;
+            animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+        }
+        .fertilizer-info {
+            background-color: #ffffff; /* Set background color */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+            animation: slideIn 0.5s ease forwards; /* Slide-in animation */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        .fertilizer-name strong {
+            color: #28a745; /* Set fertilizer name color */
+        }
+        .btn-back {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="fertilizer-info">
+            <h1 class="result-title">Fertilizer Recommendation Result</h1>
+            <div class="fertilizer-info">
+                <p class="fertilizer-name">The recommended fertilizer is: <strong>{{ fertilizer }}</strong></p>
+            </div>
+            <a href="/" class="btn btn-primary btn-back">Back to Main</a>
+        </div>
+    </div>
+</body>
+</html>

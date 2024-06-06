@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Recommendation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fertilizer_form.css') }}"> 
+</head>
+<body>
+    <div class="container">
+        <h1>Fertilizer Recommendation</h1>
+        <form method="POST" action="/fertilizer">
+            <div class="form-group">
+                <label for="temperature">Temperature:</label>
+                <input type="number" class="form-control" id="temperature" name="temperature" required>
+            </div>
+            <div class="form-group">
+                <label for="humidity">Humidity:</label>
+                <input type="number" class="form-control" id="humidity" name="humidity" required>
+            </div>
+            <div class="form-group">
+                <label for="soil_moisture">Soil Moisture:</label>
+                <input type="number" class="form-control" id="soil_moisture" name="soil_moisture" required>
+            </div>
+            <div class="form-group">
+                <label for="soil_type">Soil Type:</label>
+                <select class="form-control" id="soil_type" name="soil_type" required>
+                    <option value="">Select Soil Type</option>
+                    <option value="Sandy">Sandy</option>
+                    <option value="Loamy">Loamy</option>
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Clayey">Clayey</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="crop_type">Crop Type:</label>
+                <select class="form-control" id="crop_type" name="crop_type" required>
+                    <option value="">Select Crop Type</option>
+                    <option value="Maize">Maize</option>
+                    <option value="Sugarcane">Sugarcane</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Tobacco">Tobacco</option>
+                    <option value="Paddy">Paddy</option>
+                    <option value="Barley">Barley</option>
+                    <option value="Millets">Millets</option>
+                    <option value="Oil seeds">Oil Seeds</option>
+                    <option value="Pulses">Pulses</option>
+                    <option value="Ground nuts">Ground Nuts</option>
+                    <option value="Wheat">Wheat</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="nitrogen">Nitrogen:</label>
+                <input type="number" class="form-control" id="nitrogen" name="nitrogen" required>
+            </div>
+            <div class="form-group">
+                <label for="phosphorus">Phosphorus:</label>
+                <input type="number" class="form-control" id="phosphorus" name="phosphorus" required>
+            </div>
+            <div class="form-group">
+                <label for="potassium">Potassium:</label>
+                <input type="number" class="form-control" id="potassium" name="potassium" required>
+            </div>
+            <button type="submit" class="btn btn-primary glow-on-hover">Recommend Fertilizer</button> 
+        </form>
+        <a href="/" class="btn btn-secondary mt-3">Back to Main</a>
+    </div>
+</body>
+</html>

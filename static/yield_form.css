@@ -1,0 +1,53 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('crop.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background-color: #007bff; 
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; 
+    border-color: #0056b3; 
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d; 
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #5a6268; 
+}
+
+.glow-on-hover {
+    transition: all 0.3s ease;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px 0px #007bff;
+    }
+    100% {
+        box-shadow: 0 0 20px 10px #007bff;
+    }
+}

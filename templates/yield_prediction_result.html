@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yield Prediction Result</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa; /* Set background color */
+      font-family: Arial, sans-serif; /* Set font family */
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh; /* Make container full height of viewport */
+    }
+    h1 {
+      color: #007bff; /* Set title color */
+      margin-bottom: 20px;
+      animation: fadeIn 0.5s ease forwards; /* Fade-in animation */
+    }
+    #result-container {
+      background-color: #ffffff; /* Set background color */
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+      animation: slideIn 0.5s ease forwards; /* Slide-in animation */
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    .btn-secondary {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Yield Prediction Result</h1>
+    <div id="result-container">
+      {% if prediction %}
+        <p>Predicted Yield: {{ prediction }} tons</p>
+      {% endif %}
+    </div>
+    <a href="/" class="btn btn-secondary mt-3">Back to Main</a>
+  </div>
+</body>
+</html>
